@@ -5,7 +5,7 @@
 
 require "with_resources"
 
-WithResourecs.with(->(){
+WithResources.with(->(){
     sock = TCPSocket.open("dest.example.com", port)
     httpclient = MyHTTPClient.new(sock) 
 }) do |sock, httpclient|
